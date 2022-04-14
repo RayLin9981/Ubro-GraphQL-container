@@ -1,0 +1,25 @@
+{
+  "name": "graphql-lambda",
+  "version": "1.0.0",
+  "description": "aws lambda",
+  "main": "graphql.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploydev" : "serverless deploy --stage dev" 
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-server-lambda": "^2.25.3",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.7.2",
+    "dotenv": "^16.0.0",
+    "graphql": "^15.8.0",
+    "graphql-scalars": "^1.15.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "serverless-offline": "^8.5.0"
+  }
+}
