@@ -29,7 +29,6 @@ const resolvers = {
     me: queryFunc.me,
     product: queryFunc.product,
     products: queryFunc.products,
-    // exchangeRecord: queryFunc.exchangeRecord,
     exchangeRecords: queryFunc.exchangeRecords,
     consumeRecords: queryFunc.consumeRecords
   },
