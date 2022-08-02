@@ -1,4 +1,6 @@
-const { ApolloServer } = require('apollo-server-lambda');
+//const { ApolloServer } = require('apollo-server-lambda');
+const { ApolloServer } = require('apollo-server');
+
 const { DateResolver } = require('graphql-scalars')
 
 const { context } = require('./src/Common/context')
@@ -50,16 +52,14 @@ const server = new ApolloServer({
   schemaDirectives: {
     admin: AdminDirective
   },
-  playground: {
-    endpoint: "/dev/graphql"
-  },
-  tracing: true,
+  // playground: {
+  //   endpoint: "/dev/graphql"
+  // },
+  // tracing: true,
   context
 });
 
-exports.graphqlHandler = server.createHandler({
-  cors: {
-    origin: true,
-    credentials: true,
-  },
-});
+server.listen().then(({ url }) => {
+  console.log(`server on ${url}`)
+
+})
