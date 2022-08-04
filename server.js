@@ -57,14 +57,8 @@ const server = new ApolloServer({
   //   endpoint: "/dev/graphql"
   // },
   // tracing: true,
-  context
+  // context
 });
 
 // 給 test 用的
 module.exports = server
-
-
-server.listen().then(({ url }) => {
-  console.log(`server on ${url}`)
-
-})

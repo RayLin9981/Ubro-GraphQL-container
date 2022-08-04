@@ -4,7 +4,7 @@
   "description": "aws lambda",
   "main": "graphql.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "deploydev": "serverless deploy --stage dev"
   },
   "author": "",
@@ -17,6 +17,7 @@
     "dotenv": "^16.0.0",
     "graphql": "^15.8.0",
     "graphql-scalars": "^1.15.0",
+    "jest": "^28.1.3",
     "jsonwebtoken": "^8.5.1",
     "mysql2": "^2.3.3"
   },

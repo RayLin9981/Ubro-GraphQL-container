@@ -56,6 +56,7 @@ scalar DateResolver
     consumeRecords: [ConsumeRecord]
     "要登入 Admin 帳號才可呼叫"
     adminHello: String @admin
+    hello: String
   }
 
   input RegisterInput {
