@@ -1,4 +1,4 @@
-name: CI
+name: Node.js test
 on:
   push:
     branches: [ main ]
@@ -8,12 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - uses: debianmaster/actions-k3s@master
-      id: k3s
-      with: 
-        version: 'v1.18.2-k3s1'
-    - run: |
-           kubectl get nodes
-           kubectl version
-           kubectl get all
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - run: npm install
+    - run: npm test
