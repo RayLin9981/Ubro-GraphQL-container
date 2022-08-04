@@ -14,8 +14,8 @@ jobs:
         node-version: 16
     - run: npm install
     - run: npm test
+
     - name: Build and Push Docker Images
-    steps:
     - uses: actions/checkout@v2
       name: Check out code
 
